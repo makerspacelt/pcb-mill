@@ -38,3 +38,14 @@ Surasti VCC pinus biski nein. Galimai del dideliu kodiku.
 
 
 So [33039] controller is responsible for closed loop control. 
+
+It seems that motor is 80V not 26 V... But we will see how it goes. 
+
+
+# Motor pinout
+
+UP MOTOR
+
+CONNECTOR
+
+A B C 5V G HA HB HC
