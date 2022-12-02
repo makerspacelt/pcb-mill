@@ -49,3 +49,48 @@ UP MOTOR
 CONNECTOR
 
 A B C 5V G HA HB HC
+
+# 2022-12-02
+Good Friday. So next two steps I want to do today, is to figure out how to connect and control spindle and Z axis in CNC shield. After this we can proceed to rest of the wiring. Possibly I may connect Y endstops too today. 
+
+## Configuring Z axis
+https://openbuilds.com/threads/using-a-solenoid-on-an-arduino-cnc-shield-and-gcode.9966/
+```
+wire it to the Coolant Enable pin and control it with  
+M8 to turn it on (equiv to Z down)  
+M9 to turn it off (equiv to Z up)
+```
+
+Well this is simplier than I thought. NOw see if I can configure that in flatcam.
+
+Ok, so there is a way without any mods to flatcam. As well... it did not have a setting. 
+https://github.com/gnea/grbl/issues/640
+```
+doesn't matter where it comes from, the z-direction pin gets set or cleared with all the other direction pins in line 324 of stepper.c
+
+`DIRECTION_PORT = (DIRECTION_PORT & ~DIRECTION_MASK) | (st.dir_outbits & DIRECTION_MASK);`
+
+replace it with some thing like:
+
+`DIRECTION_PORT = (DIRECTION_PORT & ~((1<<X_DIRECTION_BIT)|(1<<Y_DIRECTION_BIT))) | (st.dir_outbits & ((1<<X_DIRECTION_BIT)|(1<<Y_DIRECTION_BIT)));`
+
+`if(st.step_outbits & (1<<Z_STEP_BIT)) DIRECTION_PORT = (DIRECTION_PORT & ~((1<<Z_DIRECTION_BIT))) | (st.dir_outbits & ((1<<Z_DIRECTION_BIT)));`
+```
+
+So i will modify the repo source for this. 
+https://github.com/gnea/grbl/wiki/Compiling-Grbl
+Zipped modified lib and included it . Upload completed.
+
+
+
+## How to control
+`git clone https://github.com/kliment/Printrun.git`
+use this app.
+
+FOund even better 
+https://cnc.js.org/
+https://create.arduino.cc/projecthub/Arnov_Sharma_makes/setting-up-grbl-on-arduino-uno-along-cncjs-dc02d9
+
+
+## Preparing SPindle.
+Tried to connect spindle with figured out schematics, but onfortunatelly no spinning occured. Only on shutdown short spin was there. So we decided to replace the controller. 
