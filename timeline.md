@@ -94,3 +94,9 @@ https://create.arduino.cc/projecthub/Arnov_Sharma_makes/setting-up-grbl-on-ardui
 
 ## Preparing SPindle.
 Tried to connect spindle with figured out schematics, but onfortunatelly no spinning occured. Only on shutdown short spin was there. So we decided to replace the controller. 
+
+Managed to connect cheap controller and start spindle. Nominal voltage seems to be 36 V.
+Spindle startup voltage is 30V, any lower and it will not start. Though if you start and drop to 26V, it will still spin. To not make it more complicated, 35V was routed from stock PSU.
+
+## 2022-12-14
+We were routing most of the cables, connected endstops (tested Y axis, seemed to be fine), removed old cables. What still left is to make adapter board for connecting extended spindle cables with controller. And then tests tests tests.
