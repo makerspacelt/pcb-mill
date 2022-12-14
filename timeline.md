@@ -100,3 +100,19 @@ Spindle startup voltage is 30V, any lower and it will not start. Though if you s
 
 ## 2022-12-14
 We were routing most of the cables, connected endstops (tested Y axis, seemed to be fine), removed old cables. What still left is to make adapter board for connecting extended spindle cables with controller. And then tests tests tests.
+
+Needed to invert axies
+Use $3=00000110 mask
+
+
+Also endstops are connected parallel on shield so
+ #define LIMITS_TWO_SWITCHES_ON_AXES 
+ needed
+
+
+
+ 22.73 250
+ 100
+
+ Anyway, still failing to home and use swithces properly. https://github.com/gnea/grbl/issues/788
+ Though did calibrate steps. And solenoid seems to work fine too.
