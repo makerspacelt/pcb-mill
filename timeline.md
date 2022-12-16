@@ -98,6 +98,8 @@ Tried to connect spindle with figured out schematics, but onfortunatelly no spin
 Managed to connect cheap controller and start spindle. Nominal voltage seems to be 36 V.
 Spindle startup voltage is 30V, any lower and it will not start. Though if you start and drop to 26V, it will still spin. To not make it more complicated, 35V was routed from stock PSU.
 
+[Datasheet for the spindle](https://crossic.com/wp-content/uploads/2022/02/JYQD-V7.5E-English-2.pdf)
+
 ## 2022-12-14
 We were routing most of the cables, connected endstops (tested Y axis, seemed to be fine), removed old cables. What still left is to make adapter board for connecting extended spindle cables with controller. And then tests tests tests.
 
@@ -116,3 +118,8 @@ Also endstops are connected parallel on shield so
 
  Anyway, still failing to home and use swithces properly. https://github.com/gnea/grbl/issues/788
  Though did calibrate steps. And solenoid seems to work fine too.
+
+ # 2022-12-16
+ Disconnected Y limit switches from the PSU, and connected straight. Using only one switch now. If want to use two, you need to connect in series. Wires already prepared.
+
+ Managed to run homing. Also started to set up work PC.
