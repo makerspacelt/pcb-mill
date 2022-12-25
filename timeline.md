@@ -123,3 +123,15 @@ Also endstops are connected parallel on shield so
  Disconnected Y limit switches from the PSU, and connected straight. Using only one switch now. If want to use two, you need to connect in series. Wires already prepared.
 
  Managed to run homing. Also started to set up work PC.
+
+ # 2022-12-25
+ Preparing workstation dockercompose. [CNCJS](https://github.com/cncjs/cncjs) had one set up, so I just configured that in compose file. 
+
+ Yeah the problem is that python container seems to open well.. python on start. I do not want that. 
+ Instead of using python container, i just switch to ubuntu and install python... Oh well. Lets hope it works.Switched to alpine to reduce size.  Nevermind... setup file is for ubuntu only. So nope. Redo... 
+ Ok, now it says that sudo not found... Installed sudo package. Another problem, requires user input in selecting timezone and region. [No interactive zones](https://stackoverflow.com/questions/53079135/how-can-i-pass-arguments-or-bypass-it-in-docker-build-process)
+
+ Other problem, that i need somehow execute flatcam so it would open within container, but I could see it on host machine. It has something to do with entrypoint. When you run the container, it will start your selected executable. 
+ ## Todo
+ - Load machine profile from file. There is an option to run with -c argument giving the file. 
+ - Set up flatcam.
