@@ -9,6 +9,7 @@ if [ -d "$DIR" ]; then
   echo "Fetching changes ${DIR}..."
   cd ${DIR}
   git fetch
+  git pull --rebase
 else
     git clone https://github.com/AntumArk/Flatcam -b old_flatcam_pyqt5
     cd ${DIR}
