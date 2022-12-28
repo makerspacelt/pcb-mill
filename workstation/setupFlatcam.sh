@@ -20,4 +20,4 @@ chmod +x setup_ubuntu.sh
 ./setup_ubuntu.sh
 
 # Create a link.
-ln -s $PWD/flatcam /home/$USER/Desktop/flatcam -f
+ln -s $PWD/flatcam /home/user/Desktop/flatcam -f
