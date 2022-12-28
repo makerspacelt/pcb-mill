@@ -4,4 +4,4 @@ services:
   cncjs:
     image: cncjs/cncjs
     ports:
-      - 8000-8000
+      - 8000:8000
