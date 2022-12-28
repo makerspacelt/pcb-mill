@@ -1,7 +1,7 @@
 #!/bin/sh -e
 # "-e" exists on first error.
 
-sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get update -y
 
 DIR="Flatcam"
 if [ -d "$DIR" ]; then
