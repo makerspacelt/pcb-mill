@@ -152,3 +152,6 @@ Aborted (core dumped)
  - Load machine profile from file. There is an option to run with -c argument giving the file. 
  - Set up flatcam.
     Sort of done... Made a script instead of docker. As I still need to learn how to use display when app is running inside container. 
+
+# 2022-12-29
+Flatcam is up and running in docker. Same with CNCJS. Just do `docker-compose up` and everything will be up. Open cncjs in (http://localhost:8000).

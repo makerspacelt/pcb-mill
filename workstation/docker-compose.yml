@@ -1,6 +1,19 @@
 version: '3.4'
 
 services:
+  workstation:
+    image: workstation
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      DISPLAY: $DISPLAY
+    volumes:
+      - '${HOME}/.Xauthority:/home/project/.Xauthority'
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./gcode/:/home/project/gcode
+    entrypoint: ./flatcam
+    
   cncjs:
     image: cncjs/cncjs
     ports:

@@ -1,5 +1,8 @@
-FROM ubuntu:latest
-WORKDIR /usr/src/app
+FROM nfqlt/php74-dev
+
+ENV XAUTHORITY /home/project/.Xauthority
+ADD build /build
+WORKDIR /home/project/Flatcam
 ## for apt to be noninteractive
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
@@ -9,7 +12,7 @@ RUN echo "tzdata tzdata/Areas select Europe" > /tmp/preseed.txt; \
     echo "tzdata tzdata/Zones/Europe select Vilnius" >> /tmp/preseed.txt; \
     debconf-set-selections /tmp/preseed.txt && \
     apt-get update && \
-    apt-get install -y tzdata
+    apt-get install -y tzdata --no-install-recommends
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     git \
@@ -17,6 +20,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     sudo\
     python3-setuptools\
     nano\
+    build-essential\
+    xserver-xorg \
+    xinit \
     # From setup_ubuntu.sh . Makes caching faster.
     libfreetype6 \
 	libfreetype6-dev \
@@ -30,14 +36,19 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	python3-pyqt5 \
 	python3-pyqt5.qtopengl \
 	python3-simplejson \
-	python3-tk
+	python3-tk \
+    # Display deps
+    libx11-xcb1 \
+	libxtst6 \
+	libasound2 \
+	x11-apps \
+	xvfb \
+	xauth \ 
+    xterm
 
-COPY Flatcam .
-#RUN git clone https://bitbucket.org/jpcgt/flatcam/src/Beta/ -b Beta
-#WORKDIR Flatcam
+RUN git clone https://github.com/AntumArk/Flatcam . -b old_flatcam_pyqt5
 # Make setup executable
 RUN chmod +x setup_ubuntu.sh
-# Run install
-#8 - Europe , 58 - Vilnius. For some reason timezone prompts are there... 
-#CMD [ "./setup_ubuntu.sh","8","58" ] 
-#CMD [./setup_ubuntu.sh]
+RUN ./setup_ubuntu.sh
+# Change user so you could run GUI
+USER project
