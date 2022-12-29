@@ -7,21 +7,12 @@ WORKDIR /home/project/Flatcam
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
 
-## preesed tzdata, update package index, upgrade packages and install needed software
-RUN echo "tzdata tzdata/Areas select Europe" > /tmp/preseed.txt; \
-    echo "tzdata tzdata/Zones/Europe select Vilnius" >> /tmp/preseed.txt; \
-    debconf-set-selections /tmp/preseed.txt && \
-    apt-get update && \
-    apt-get install -y tzdata --no-install-recommends
-
 RUN apt-get update && apt-get install -y --no-install-recommends \
     git \
     python3-pip\
     sudo\
     python3-setuptools\
     nano\
-    build-essential\
-    xserver-xorg \
     xinit \
     # From setup_ubuntu.sh . Makes caching faster.
     libfreetype6 \
