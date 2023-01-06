@@ -144,17 +144,6 @@
     "direction": "horizontal",
     "width": 300
   },
-  "left-ribbon": {
-    "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "obsidian-markdown-formatting-assistant-plugin:Open Markdown Formatting Assistant": false
-    }
-  },
   "active": "56896aad25c66e79",
   "lastOpenFiles": [
     "timeline.md",
