@@ -46,4 +46,4 @@ TODO
 - [x] Create setup guide
 - [ ] Create upgrade plan
 - [ ] Create user guide
-- [ ] Add grbl repo as submodule. 
+- [x] Add grbl repo as submodule. 
