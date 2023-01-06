@@ -1,0 +1,3 @@
+[submodule "grbl"]
+	path = grbl-pcbmill
+	url = https://github.com/AntumArk/grbl-pcbmill
