@@ -123,3 +123,35 @@ Also endstops are connected parallel on shield so
  Disconnected Y limit switches from the PSU, and connected straight. Using only one switch now. If want to use two, you need to connect in series. Wires already prepared.
 
  Managed to run homing. Also started to set up work PC.
+
+ # 2022-12-25
+ Preparing workstation dockercompose. [CNCJS](https://github.com/cncjs/cncjs) had one set up, so I just configured that in compose file. 
+
+ Yeah the problem is that python container seems to open well.. python on start. I do not want that. 
+ Instead of using python container, i just switch to ubuntu and install python... Oh well. Lets hope it works.Switched to alpine to reduce size.  Nevermind... setup file is for ubuntu only. So nope. Redo... 
+ Ok, now it says that sudo not found... Installed sudo package. Another problem, requires user input in selecting timezone and region. [No interactive zones](https://stackoverflow.com/questions/53079135/how-can-i-pass-arguments-or-bypass-it-in-docker-build-process) . That fixed prompts. But still need to remove easy_install line. Then next error is fixed using [Downgrade vispy](https://bitbucket.org/jpcgt/flatcam/issues/538/ubuntu-fail-to-run-from-source)
+
+Next error:
+```
+root@ba43b2a95795:/usr/src/app# python3 FlatCAM.py 
+/usr/local/lib/python3.10/dist-packages/vispy/visuals/graphs/layouts/networkx_layout.py:10: UserWarning: Networkx not found, please install network to use its layouts
+  warnings.warn(
+qt.qpa.xcb: could not connect to display 
+qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, wayland-egl, wayland, wayland-xcomposite-egl, wayland-xcomposite-glx, webgl, xcb.
+
+Aborted (core dumped)
+```
+[Running GUI in docker](https://www.howtogeek.com/devops/how-to-run-gui-applications-in-a-docker-container/)
+
+
+ Other problem, that i need somehow execute flatcam so it would open within container, but I could see it on host machine. It has something to do with entrypoint. When you run the container, it will start your selected executable. 
+ ## Todo
+ - Load machine profile from file. There is an option to run with -c argument giving the file. 
+ - Set up flatcam.
+    Sort of done... Made a script instead of docker. As I still need to learn how to use display when app is running inside container. 
+
+# 2022-12-29
+Flatcam is up and running in docker. Same with CNCJS. Just do `docker-compose up` and everything will be up. Open cncjs in (http://localhost:8000).
