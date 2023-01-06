@@ -30,3 +30,4 @@ If you need to you can set this up on system startup, but this will not be cover
 - [x] Create setup guide
 - [ ] Create upgrade plan
 - [ ] Create user guide
+- [ ] Add grbl repo as submodule. 
