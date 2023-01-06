@@ -14,8 +14,24 @@ This should start [Cncjs] server at (http://localhost:8000), and [Flatcam] deskt
 If you need to you can set this up on system startup, but this will not be covered here. 
 
 # Cncjs
+## Introduction
+Web based application for controlling, configuring and running the machine with gcode. [Cncjs docs](https://cnc.js.org/docs/)
+## Configuring machine
+### Inner GRBL settings
+You can use embedded terminal window to use [GRBL configuration commands](https://github.com/gnea/grbl/blob/master/doc/markdown/settings.md) . **CAUTION. NO SETTING BACKUP YET MADE :D** . Otherwise reflashing firmware is needed to make it permanent. 
+### Machine limits
+TODO
 # Flatcam
-
+## Introduction
+Desktop app to generate instructions for milling pcbs or lasercutting. More in [Flatcam docs](http://flatcam.org/).
+## A quirk
+Unfortunatelly support on this is a bit patchy, as new version is being developed, and thus the set up was not really fixed. This is why a [fork](https://github.com/AntumArk/Flatcam) is used and old flatcam version ( functions perfectly fine). What is basically done, is the dependencies were fixed and install script was automated using docker. 
+## Feed speed
+TODO
+## Dwell
+TODO
+## Spindle speed
+TODO
 # TODO
 - [x] - Figure out spindle wiring.
 - [x] - Connect spindle to CNC shield.
