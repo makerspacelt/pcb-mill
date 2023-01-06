@@ -158,12 +158,12 @@ Flatcam is up and running in docker. Same with CNCJS. Just do `docker-compose up
 
 # 2022-12-31
 Finally started whole machine. Connected workshop vacuum to machine, to pull the base plate closer. Had to clean the vacuum first... There were a problem of trying to adjust the height of the drill, figured out that you need to turn a screw on a side:
-![[Pasted image 20230106152902.png]]
-It has a really weird bit. You need to use small steel strip. After that, ran some tests with 0.1 mm engraving bit. ![[IMG_20221231_223333.jpg]]
-![[IMG_20221231_221200.jpg]]![[IMG_20221231_221203.jpg]]
+![[doc/images/Pasted image 20230106152902.png]]
+It has a really weird bit. You need to use small steel strip. After that, ran some tests with 0.1 mm engraving bit. ![[doc/images/IMG_20221231_223333.jpg]]
+![[doc/images/IMG_20221231_221200.jpg]]![[doc/images/IMG_20221231_221203.jpg]]
 Results well... are something. Depth is still too big, so more tuning needed. Though I also tried it on aluminium with 0.5 mm bit.
-![[IMG_20221231_225819.jpg]]![[IMG_20221231_230227.jpg]]
-![[IMG_20221231_231920.jpg]]
+![[doc/images/IMG_20221231_225819.jpg]]![[doc/images/IMG_20221231_230227.jpg]]
+![[doc/images/IMG_20221231_231920.jpg]]
 As the bit had 4 wings, the outer edge seem to be not clear. A single blade drill bit should be used. Otherwise, pretty good results. 
 # 2023-01-06
 Updating documentation, plans. 

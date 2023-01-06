@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "timeline.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "timeline.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "timeline.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "timeline.md"
               }
             }
           },
@@ -157,8 +157,8 @@
   },
   "active": "56896aad25c66e79",
   "lastOpenFiles": [
-    "timeline.md",
     "README.md",
+    "timeline.md",
     "doc/images/IMG_20221231_221200.jpg",
     "doc/images/IMG_20221231_223333.jpg",
     "doc/images/IMG_20221231_225819.jpg",
