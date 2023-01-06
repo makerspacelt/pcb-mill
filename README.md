@@ -4,12 +4,16 @@ This project is for reviving PotoMat S42 PCB milling machine which is out of sup
 The documentation will be updated, in the mean time, progress will be reported in [timeline](timeline.md)
 
 # TODO
-- Figure out spindle wiring.
-- Connect spindle to CNC shield.
-- Create control schematic for solenoid (use original board as example)
-- Figure out how to control solenoid with CNC shield
-- Connect Y endstops
-- Configure XY axies
-- Configure spindle
-- Configure solenoid as Z axis
-- First test.
+- [x] - Figure out spindle wiring.
+- [x] - Connect spindle to CNC shield.
+- [x] - Create control schematic for solenoid (use original board as example)
+- [x] - Figure out how to control solenoid with CNC shield
+- [x] - Connect Y endstops
+- [x] - Configure XY axies
+- [x] - Configure spindle
+- [x] - Configure solenoid as Z axis
+- [x] - First test.
+- [ ] Create machine schematics
+- [ ] Create setup guide
+- [ ] Create upgrade plan
+- [ ] Create user guide
