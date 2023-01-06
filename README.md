@@ -45,6 +45,6 @@ TODO
 - [x] - First test.
 - [ ] Create machine schematics
 - [x] Create setup guide
-- [ ] Create upgrade plan
+- [x] Create upgrade plan
 - [ ] Create user guide
 - [x] Add grbl repo as submodule. 
