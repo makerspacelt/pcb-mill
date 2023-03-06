@@ -1,0 +1,6 @@
+#pragma once
+
+#define SPINDLE_MAX_TEMP 30
+#define SPINDLE_SENSOR_INDEX 0
+#define COOLANT_MAX_TEMP 30
+#define COOLANT_SENSOR_INDEX 1
