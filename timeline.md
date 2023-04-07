@@ -167,3 +167,44 @@ Results well... are something. Depth is still too big, so more tuning needed. Th
 As the bit had 4 wings, the outer edge seem to be not clear. A single blade drill bit should be used. Otherwise, pretty good results. 
 # 2023-01-06
 Updating documentation, plans. 
+
+
+
+# 2023-04-07
+@�Ij
+Grbl 1.1h ['$' for help]
+[MSG:'$H'|'$X' to unlock]
+$0=10
+$1=25
+$2=0
+$3=0
+$4=0
+$5=1
+$6=0
+$10=19
+$11=0.010
+$12=0.002
+$13=0
+$20=0
+$21=0
+$22=1
+$23=11
+$24=25.000
+$25=500.000
+$26=250
+$27=1.000
+$30=2000
+$31=0
+$32=0
+$100=1100.000
+$101=1100.000
+$102=2445.000
+$110=500.000
+$111=2000.000
+$112=150.000
+$120=10.000
+$121=10.000
+$122=5.000
+$130=250.000
+$131=200.000
+$132=200.000
