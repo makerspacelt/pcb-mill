@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "844e5fea8daf0c4d",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.1.9"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -144,7 +155,18 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "81c778a9ab4f35db",
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-markdown-formatting-assistant-plugin:Open Markdown Formatting Assistant": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "844e5fea8daf0c4d",
   "lastOpenFiles": [
     "README.md",
     "timeline.md",
