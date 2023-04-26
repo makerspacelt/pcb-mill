@@ -4,6 +4,8 @@ This project is for reviving PotoMat S42 PCB milling machine which is out of sup
 The documentation will be updated, in the mean time, progress will be reported in [timeline](timeline.md)
 And the future plans in [[Planned upgrades]]
 
+# Supported platforms
+linux
 # Setup workstation
 1.  Install docker and docker compose on your system [Docker instalation instructions](https://docs.docker.com/get-docker/)
 2. Clone this repository.
