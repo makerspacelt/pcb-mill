@@ -9,6 +9,8 @@ services:
     restart: always
     environment:
       DISPLAY: $DISPLAY
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
     volumes:
       - '${HOME}/.Xauthority:/home/project/.Xauthority'
       - /tmp/.X11-unix:/tmp/.X11-unix
