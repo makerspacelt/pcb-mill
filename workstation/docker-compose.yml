@@ -14,7 +14,7 @@ services:
     devices:
       - "/dev/ttyUSB0:/dev/ttyUSB0"
     volumes:
-      - '${HOME}/.Xauthority:/home/project/.Xauthority'
+      - '/home/user/.Xauthority:/home/project/.Xauthority'
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ./gcode/:/home/project/gcode
     entrypoint: ./flatcam
