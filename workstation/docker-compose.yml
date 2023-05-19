@@ -9,6 +9,8 @@ services:
     restart: always
     environment:
       DISPLAY: $DISPLAY
+    group_add:
+      - dialout
     devices:
       - "/dev/ttyUSB0:/dev/ttyUSB0"
     volumes:
