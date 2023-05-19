@@ -6,6 +6,7 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
+    restart: always
     environment:
       DISPLAY: $DISPLAY
     volumes:
@@ -16,5 +17,6 @@ services:
     
   cncjs:
     image: cncjs/cncjs
+    restart: always
     ports:
       - 8000:8000
