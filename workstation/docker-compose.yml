@@ -27,4 +27,4 @@ services:
       - dialout
     devices:
       - "/dev/ttyUSB0:/dev/ttyUSB0"
-    entrypoint: node . --port /dev/ttyUSB0 -c .cncrc
+    entrypoint: node . --port /dev/ttyUSB0 -c /root/.cncrc
