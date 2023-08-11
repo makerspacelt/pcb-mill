@@ -16,7 +16,10 @@ services:
     entrypoint: ./flatcam
     
   cncjs:
-    image: cncjs/cncjs
+    image: pcbmill-cncjs
+    build: 
+      context: .
+      dockerfile: pcbmill-cncjs.dockerfile
     restart: always
     ports:
       - 8000:8000
@@ -24,3 +27,4 @@ services:
       - dialout
     devices:
       - "/dev/ttyUSB0:/dev/ttyUSB0"
+    entrypoint: node . --port /dev/ttyUSB0 -c .cncrc
