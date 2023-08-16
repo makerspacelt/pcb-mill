@@ -27,4 +27,13 @@ services:
       - dialout
     devices:
       - "/dev/ttyUSB0:/dev/ttyUSB0"
+  cncjssetup:
+    image: pcbmill-cncjs
+    depends_on:
+      - cncjs
+    restart: no
+    group_add:
+      - dialout
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
     entrypoint: node . --port /dev/ttyUSB0 -c /root/.cncrc
