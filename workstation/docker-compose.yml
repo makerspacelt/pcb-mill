@@ -31,7 +31,7 @@ services:
     image: pcbmill-cncjs
     depends_on:
       - cncjs
-    restart: no
+    restart: 'no'
     group_add:
       - dialout
     devices:
